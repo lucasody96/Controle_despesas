@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Despesas pessoais</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/despesa.css">
+
+    <!-- Bootstrap inicial -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+
+    
+    
+</head>
+<body class="body">
+
+    <div class="container">
+        <div class="row">
+            <div class="col mb-6 title text-center">
+                <h1 class="display-4">Registro de Nova Despesa</h1>
+            </div>
+        </div>
+        
+        <div>
+            <p class="text-center" style="margin-bottom: 0%;">Deseja consultar suas despesas?</p>
+            <a class="nav-link text-center" href="consulta.html">Clique aqui</a>
+        </div>
+
+        <form class="form-horizontal">
+
+            <label for="Data" class="label"><strong>Data:</strong></label>
+            <div class="form-group">
+                
+              <input type="date" class="form-control formtype" style="width: 30%;" id="data">  
+
+            </div>
+
+           
+
+            <div class="form-group">
+                <label for="Tipo" class="label"><strong>Tipo de Despesa:</strong></label>
+                <select class="form-control formtype" style="width: 30%;" id="tipo">
+                    <option value="Educacao">Educação</option>
+                    <option value="Alimentacao">Alimentação</option>
+                    <option value="Transporte">Transporte</option>
+                    <option value="Internet">Internet</option>
+                    <option value="LAG">Luz/Água/Gás</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="Valor" class="label"><strong>Valor:</strong></label>
+                <input type="number" class="form-control formtype" id="valor" placeholder="R$0,00" style="width:30%;">
+            </div>
+
+            <div class="form-group">
+                <label for="Descricao" class="label"><strong>Descrição:</strong></label>
+                <textarea type="text" rows="7" class="form-control formtype" id="descricao" placeholder="Descreva sua despesa aqui" style="width:30%"></textarea>
+            </div>
+
+            <button type="button" class="btn btn-primary formtype" style="width:30%" onclick="cadastrarDespesa()">Salvar Despesa</button>
+        </form>
+    </div>
+    <script src="js/despesa.js"></script>
+</body>
+</html>
